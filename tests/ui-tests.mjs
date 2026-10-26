@@ -6,7 +6,7 @@ const { test, run } = await import(resolve(root, "test-framework/framework.mjs")
 
 test("onesecret_ui: loads UI", async (app) => {
   await app.waitFor(
-    async () => { await app.expectTexts(["Onesecret", "New secret"]); },
+    async () => { await app.expectTexts(["OneSecret", "New secret"]); },
     { timeout: 15000, interval: 500, description: "UI to load" }
   );
 });

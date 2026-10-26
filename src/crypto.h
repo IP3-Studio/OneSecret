@@ -1,4 +1,4 @@
-// Qt-free cryptographic helpers for Onesecret, over OpenSSL 3 (libcrypto).
+// Qt-free cryptographic helpers for OneSecret, over OpenSSL 3 (libcrypto).
 // Every function that handles key material works on std::vector<uint8_t>
 // buffers that the caller wipes with osc::wipe() when done.
 #pragma once
@@ -52,7 +52,7 @@ std::string base32(const Bytes& b);                      // RFC 4648 lowercase, 
 std::string hex(const Bytes& b);
 uint8_t crc8(const Bytes& b);                             // CRC-8/ATM, poly 0x07
 
-// ---- the Onesecret link -----------------------------------------------------
+// ---- the OneSecret link -----------------------------------------------------
 // "os1_" + base64url(0x01 || K_link[32] || SHA-256(C)[0..8] || crc8) = 56 chars.
 // Version 1 (v0.1 and v0.2): the claim HMAC covers "claim"||id||R||n.
 // Version 2 (v0.3): the claim HMAC also covers the optional name tag, so a

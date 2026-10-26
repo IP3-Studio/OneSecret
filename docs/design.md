@@ -98,7 +98,7 @@ restart are handled like live ones.
 ## Delivery glue
 
 The backend arms the delivery module's events once, then probes
-`getAvailableNodeInfoIDs`. If that succeeds another app owns the node and Onesecret uses
+`getAvailableNodeInfoIDs`. If that succeeds another app owns the node and OneSecret uses
 it, inheriting its preset. Otherwise it creates one with
 `{"mode":"Core","preset":"logos.dev"}` and starts it. Subscriptions retry six times at
 three-second intervals. `getConnectionStatus` drives the footer. Claim beacons wait for
@@ -153,5 +153,5 @@ re-asking, so the sender finds a recent request on return however long the secre
   archived release from the fleet within three days, could reconstruct the secret. The
   recipient saw it anyway.
 - Any loaded Basecamp module can send junk claims. Each costs one HMAC check.
-- A future Basecamp that enforces inter-module access policies would need Onesecret
+- A future Basecamp that enforces inter-module access policies would need OneSecret
   listed as an allowed caller of the delivery module.

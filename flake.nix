@@ -1,5 +1,5 @@
 {
-  description = "Onesecret: read-once secret sharing for Logos Basecamp over Logos Messaging";
+  description = "OneSecret: p2p secret sharing for Logos Basecamp over Logos Messaging";
 
   inputs = {
     logos-module-builder.url = "github:logos-co/logos-module-builder";

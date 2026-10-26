@@ -17,7 +17,7 @@
 #include <functional>
 #include <optional>
 
-// Onesecret backend. Runs in the module's ui-host process; the QML view in
+// OneSecret backend. Runs in the module's ui-host process; the QML view in
 // Basecamp talks to it over QtRemoteObjects (src/onesecret_ui.rep).
 //
 // One secret = one content topic on Logos Messaging. The sender's backend is

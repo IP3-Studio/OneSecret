@@ -1,11 +1,11 @@
 {
   "name": "onesecret_ui",
-  "display_name": "Onesecret",
+  "display_name": "OneSecret",
   "version": "0.3.2",
   "type": "ui_qml",
   "interface": "universal",
   "category": "privacy",
-  "description": "Share a secret that can be read once. The sender's Basecamp holds the key and destroys it on the first read",
+  "description": "p2p secret sharing app. The secret can be read once; the sender's own Basecamp holds the only key and destroys it after the last allowed read",
   "main": "onesecret_ui_plugin",
   "icon": "icons/onesecret.png",
   "view": "qml/Main.qml",

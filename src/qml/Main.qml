@@ -4,7 +4,7 @@ import QtQuick.Layouts
 import Logos.Theme
 import Logos.Controls
 
-// Onesecret view. Runs inside Basecamp; the backend runs in the module's
+// OneSecret view. Runs inside Basecamp; the backend runs in the module's
 // ui-host process and is reached through the typed replica logos.module().
 // Dialogs are in-scene overlays (Popup does not paint reliably inside
 // Basecamp's embedded QQuickWidget).
@@ -159,7 +159,7 @@ Item {
         RowLayout {
             Layout.fillWidth: true
             spacing: Theme.spacing.medium
-            LogosText { text: "Onesecret"; font.pixelSize: Theme.typography.panelTitleText; font.weight: Theme.typography.weightBold }
+            LogosText { text: "OneSecret"; font.pixelSize: Theme.typography.panelTitleText; font.weight: Theme.typography.weightBold }
             LogosBadge {
                 objectName: "deliveryBadge"
                 text: root.stateLabel(root.deliveryState)
@@ -226,7 +226,7 @@ Item {
                                 Layout.fillWidth: true
                                 wrapMode: Text.Wrap
                                 color: Theme.palette.textSecondary
-                                text: "Send this over any channel. Each person who opens it gets the secret once, up to the number of readers you chose, until it expires. Their request reaches this Basecamp when it is running with Onesecret loaded; the network holds each request for about three days and their app keeps asking."
+                                text: "Send this over any channel. Each person who opens it gets the secret once, up to the number of readers you chose, until it expires. Their request reaches this Basecamp when it is running with OneSecret loaded; the network holds each request for about three days and their app keeps asking."
                             }
                             LogosCopyableText {
                                 objectName: "linkText"
@@ -247,7 +247,7 @@ Item {
                                 LogosCopyButton {
                                     id: hintCopy
                                     visible: false
-                                    value: "One-time secret, open it in the Onesecret app in Logos Basecamp:\n" + root.lastLink
+                                    value: "One-time secret, open it in the OneSecret app in Logos Basecamp:\n" + root.lastLink
                                 }
                                 Item { Layout.fillWidth: true }
                                 LogosButton {

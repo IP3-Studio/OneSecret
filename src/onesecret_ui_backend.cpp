@@ -303,7 +303,7 @@ bool OnesecretUiBackend::loadRestKey()
         }
         if (!fromFile)
             k = osc::randomBytes(32);
-        const auto put = osc::keystore::set(service, account, k, "Onesecret at-rest key");
+        const auto put = osc::keystore::set(service, account, k, "OneSecret at-rest key");
         if (put.ok) {
             m_kRest = k;
             if (fromFile)
@@ -1189,7 +1189,7 @@ void OnesecretUiBackend::openLink(QString link, QString passphrase)
     const auto parts = osc::decodeLink(link.toStdString());
     if (!parts) {
         showOpen(QString(), QStringLiteral("invalid"),
-                 QStringLiteral("That is not a complete Onesecret link. Check for a missing or changed character."));
+                 QStringLiteral("That is not a complete OneSecret link. Check for a missing or changed character."));
         return;
     }
     const osc::Derived dv = osc::deriveFromLink(parts->kLink);

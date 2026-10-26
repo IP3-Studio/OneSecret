@@ -1,4 +1,4 @@
-# Basecamp Onesecret
+# OneSecret - p2p secret sharing app
 
 > **Disclaimer.** This is a personal, experimental hobby project. It is not an
 > official Logos product. Not audited. It is provided as is, with no warranty of
@@ -19,7 +19,7 @@ delivery module.
 
 The secret is encrypted on your machine with a key split in two. One half travels in
 the link. The other half stays on your Basecamp. When the recipient pastes the link
-into their Onesecret, their app asks yours for the second half over Logos Messaging.
+into their OneSecret, their app asks yours for the second half over Logos Messaging.
 Your app answers each reader once, wrapped to a one-off key that only that reader can
 open. When the last allowed reader has been served it wipes everything it held. Anyone
 who asks later is told the secret is gone.
@@ -30,14 +30,14 @@ days. They are encrypted to keys that both sides have erased, so they cannot be 
 ## The one rule
 
 Your Basecamp is the only place the secret exists, so the recipient's request has to
-reach it while Basecamp is running with Onesecret loaded. If your laptop is closed when
+reach it while Basecamp is running with OneSecret loaded. If your laptop is closed when
 the recipient opens the link, their request waits on the network and your app answers
 it the next time it starts. The network keeps each request and answer for about three
 days, and the recipient's app repeats its request whenever it is open, for up to two
 weeks. The two of you need to be online at some point before the secret expires, and
 you need to return within about three days of one of their requests.
 
-Basecamp does not reopen apps at launch. Open Onesecret each time you start Basecamp
+Basecamp does not reopen apps at launch. Open OneSecret each time you start Basecamp
 if you have secrets waiting to be read.
 
 ## What self-destruct means here
@@ -78,7 +78,7 @@ lgpm --modules-dir "$BASECAMP_DIR/modules" \
      install --file onesecret_ui-darwin-arm64.lgx
 ```
 
-Both sender and recipient need Basecamp with Onesecret installed and loaded, on the
+Both sender and recipient need Basecamp with OneSecret installed and loaded, on the
 same network preset.
 
 ## Use
@@ -136,7 +136,7 @@ Two public presets exist and both parties must use the same one:
 - `logos.test`. The preset the Basecamp Chat app uses. Since October 2026 sending on
   it needs a funded RLN membership, which the RLN Membership app registers.
 
-If another app such as Chat already started the delivery node, Onesecret uses that node
+If another app such as Chat already started the delivery node, OneSecret uses that node
 and inherits its preset. The footer shows which preset is live.
 
 ## Limits
