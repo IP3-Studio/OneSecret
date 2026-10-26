@@ -164,8 +164,8 @@ See [docs/design.md](docs/design.md) for the full design and
 Requires Nix with flakes.
 
 ```bash
-git clone https://github.com/IP3-Studio/Basecamp-onesecret-app
-cd Basecamp-onesecret-app
+git clone https://github.com/IP3-Studio/OneSecret
+cd OneSecret
 nix build                      # compile the plugin
 nix build .#lgx-portable       # package a shareable .lgx for your platform
 nix run .                      # run it in the standalone dev host
